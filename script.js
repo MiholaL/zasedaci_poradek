@@ -1,4 +1,6 @@
+// Proměnné
 let number = 0;
+let poradi = 0;
 
 function processNumber() {
     // "Připraví" číslo na použití v generátoru
@@ -13,41 +15,36 @@ function reload_page() {
 
 document.addEventListener("DOMContentLoaded", function () {
     // Listy žáků musí mít stejný počet položek
-    const students1 = ["Bouzková Klára", "Březíková Diana", "Dulanská Petra", "Hanáková Barbora", "Hausnerová Zuzana", "Hrazdirová Anna", "Hronková Hana", "Ledvinová Barbora", "Markovičová Laura", "Příkopová Veronika", "Slezáková Alžběta", "Štěpaníková Laura", "Theiberová Eliška", "Tomišková Ester", "Zemanová Natalie"];
-    const students2 = ["Dostal Radim", "Gajdušek Adam", "Galanda Milan", "Jaroš David", "Kadláček Jan", "Martinec Filip", "Mihola Lukáš", "Palčík Tibor", "Podstrelený František", "Skařupa David", "Škrabal Marek", "Zborek Michael", "Žydel Daniel", "Nikdo", "Nikdo"];
+    let students1 = ["Bouzková Klára", "Březíková Diana", "Dulanská Petra", "Hanáková Barbora", "Hausnerová Zuzana", "Hrazdirová Anna", "Hronková Hana", "Ledvinová Barbora", "Markovičová Laura", "Příkopová Veronika", "Slezáková Alžběta", "Štěpaníková Laura", "Theiberová Eliška", "Tomišková Ester", "Zemanová Natalie"];
+    let students2 = ["Dostal Radim", "Gajdušek Adam", "Galanda Milan", "Jaroš David", "Kadláček Jan", "Martinec Filip", "Mihola Lukáš", "Palčík Tibor", "Podstrelený František", "Skařupa David", "Škrabal Marek", "Zborek Michael", "Žydel Daniel", "Nikdo", "Nikdo"];
     const tdElements = document.querySelectorAll("td");
     const fillTableButton = document.getElementById("fillTableButton");
     const downloadTableButton = document.getElementById("downloadTableButton");
-    let spusteno = false;
 
     // Generátor náhodných čísel
-    // Nahradit něčím co aspoň vypadá náhodně
-    // Nechce se mi to řešit, ale je to zatím ten největší problém
-    function rand(input,poradi) {
-        cache = input + poradi;
-        for (let i = 0;i < 2000;i++) {
-            cache = (7 + cache * (3 + cache)) % 1001;
-        }
-        return cache;
+    // Asi bude v budoucnu nahrazen, ale funguje dostatečně dobře a teď se mi to nechce řešit
+    function rand(number) {
+        let x = Math.sin(number + poradi) * 10000;
+        poradi++;
+        return x - Math.floor(x);
     }
     
-
     // Funkce pro náhodné promíchání pole
-    function shuffleArray(array,poradi) {
+    function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
-            // Nevím jestli je řádek 38 správně
-            const j = rand(number + i + poradi) % array.length;
+            const j = Math.floor(rand(number) * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
-        
     }
 
     // Funkce pro naplnění tabulky
     function fillTable() {
-        // Pokud už byl zasedací pořádek jednou vygenerován, tak se musí stránka obnovit
-        if (spusteno) location.reload();
-        spusteno = true;
 
+        // Nastaví obě pole a generátor na původní hodnota aby mohl být spuštěn několikrát bez obnovení stránky 
+        students1 = ["Bouzková Klára", "Březíková Diana", "Dulanská Petra", "Hanáková Barbora", "Hausnerová Zuzana", "Hrazdirová Anna", "Hronková Hana", "Ledvinová Barbora", "Markovičová Laura", "Příkopová Veronika", "Slezáková Alžběta", "Štěpaníková Laura", "Theiberová Eliška", "Tomišková Ester", "Zemanová Natalie"];
+        students2 = ["Dostal Radim", "Gajdušek Adam", "Galanda Milan", "Jaroš David", "Kadláček Jan", "Martinec Filip", "Mihola Lukáš", "Palčík Tibor", "Podstrelený František", "Skařupa David", "Škrabal Marek", "Zborek Michael", "Žydel Daniel", "Nikdo", "Nikdo"];
+        poradi = 0;
+        
         // Zamíchá obě pole
         shuffleArray(students1, 1);
         shuffleArray(students2, 2);

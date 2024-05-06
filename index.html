@@ -61,11 +61,10 @@
             </table>
         </div>
       
-        <label for="numberInput">Zadej číslo:</label>
+        <label for="numberInput">Zadejte číslo:</label>
         <input type="number" id="numberInput" class="btn" style="background-color: #eee;" name="numberInput">
-        <button onclick="processNumber()" class="btn" style="background-color: chocolate; color: #fff;">Potvrdit</button>
         <br> <br>
-        <button id="fillTableButton" class="btn btn-primary">Naplnit tabulku</button>
+        <button id="fillTableButton" onclick="processNumber()" class="btn btn-primary">Naplnit tabulku</button>
         <button id="downloadTableButton" class="btn btn-success ml-2">Stáhnout tabulku</button>
         <br> <br>
         <button onclick="reload_page()" class="btn" style="background-color: crimson; color: #fff;" name="reload">Načíst znovu</button>

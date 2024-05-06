@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zasedací pořádek</title>
     <link rel="icon" type="image/x-icon" href="gjs.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -60,8 +60,15 @@
                 </tbody>
             </table>
         </div>
+      
+        <label for="numberInput">Zadej číslo:</label>
+        <input type="number" id="numberInput" class="btn" style="background-color: #eee;" name="numberInput">
+        <button onclick="processNumber()" class="btn" style="background-color: chocolate; color: #fff;">Potvrdit</button>
+        <br> <br>
         <button id="fillTableButton" class="btn btn-primary">Naplnit tabulku</button>
         <button id="downloadTableButton" class="btn btn-success ml-2">Stáhnout tabulku</button>
+        <br> <br>
+        <button onclick="reload_page()" class="btn" style="background-color: crimson; color: #fff;" name="reload">Načíst znovu</button>
         <script src="script.js"></script>
         <br><br>
         <div class="text-center">
@@ -70,6 +77,17 @@
             <a href="https://github.com/miholal/zasedaci_poradek/" target="_blank">Odkaz na upravený GitHub
                 repozitář</a>
         </div>
+        <br>
+        <p style="font-size: 19px;">Instrukce:</p>
+        <p style="font-size: 18px;">
+        <ol>
+            <li>Zadejte jakoukoliv hodnotu větší než 0</li>
+            <li>Klikněte na tlačítko "Potvrdit"</li>
+            <li>Klikněte na tlačítko "Naplnit tabulku"</li>
+        </ol>
+        <br>
+        Jestli chcete vytvořit další tak musíte stránku načíst znovu
+        </p>
     </div>
 </body>
 

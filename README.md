@@ -1,2 +1,55 @@
 # Vylepšená verze zasedacího pořádku Davida Dohnala
 Odkaz <a href="https://ddohnal.github.io/zasedaci_poradek/">zde</a>
+
+# Seznam zasedacích pořádků od 1 do 50:
+3 (David J. a Honza),
+4 (Honza a Tibor),
+5 Perfektní (0 špatnýh kombinací)
+6 (Michal a Franta),
+7 (Radim, Filip a David J.)
+8 (Franta a Honza)
+9 (Franta a David J. + Michal a Tibor)
+10 Perfektní (0 špatných kombinací)
+11 (Lukáš a Michael + Adam, Honza, Filip, Radim a Tibor)
+12 (Tibor a Franta)
+13 (Honza, Tibor a Adam)
+14 (Tibor, Michael a David J.)
+15 Perfektní (0 špatných kombinací)
+16 (Michael, David J. a Tibor)
+17 (Honza a Lukáš)
+18 (David J., Tibor, Michael a Adam)
+19 (Michael a Lukáš + David J., Honza a Franta)
+20 (David J. a Honza + Lukáš a Michael)
+21 (Tibor a David J. + Adam a Franta)
+22 (Michael a David J.)
+23 (Michael a Marek)
+24 (Tibor a Honza)
+25 (Honza, Lukáš a Tibor)
+26 (Lukáš, Honza a Michael)
+27 (Honza, Tibor, Franta a David)
+28 (Franta, Adam a Tibor)
+29 (Tibor a Honza)
+30 (Michael a Marek)
+31 (Honza, Tibor, Franta a Michael)
+32 (Lukáš, Michael a Franta)
+33 (Michael a Lukáš)
+34 (Franta, Adam a Tibor)
+35 (Franta a Adam)
+36 (Lukáš, Michael a Tibor)
+37 (Adam a Honza + Michael a Tibor)
+38 (Franta, Lukáš a Adam)
+39 (Franta, Lukáš a Michael)
+40 (Franta, Tibor a Adam + Michael a Lukáš)
+41 (David J., Michael a Franta)
+42 (Adam, Honza a Tibor)
+43 (Franta, Tibor, Adam a Honza)
+44 (Lukáš a Franta + Tibor a Honza)
+45 (David J. a Franta + Honza)
+46 (David J. a Franta + Honza a Lukáš)
+47 (Adam, Honza a Tibor)
+48 (Franta a David J.)
+49 (Lukáš a Michael)
+50 (Honza a Tibor)
+
+# Seznam relativně dobrých čísel:
+5,10,15

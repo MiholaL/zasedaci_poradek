@@ -24,9 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Generátor náhodných čísel
     // Asi bude v budoucnu nahrazen, ale funguje dostatečně dobře a teď se mi to nechce řešit
     function rand(number) {
-        let x = Math.sin(number + poradi) * 10000;
-        poradi++;
-        return x - Math.floor(x);
+        if (number <= 0) {
+            return Math.random();
+        } else {
+            let x = Math.sin(number + poradi) * 10000;
+            poradi++;
+            return x - Math.floor(x);
+        }
     }
     
     // Funkce pro náhodné promíchání pole

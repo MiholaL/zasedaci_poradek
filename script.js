@@ -2,6 +2,10 @@
 let number = 0;
 let poradi = 0;
 
+function generate() {
+    alert(Math.floor(Math.random()*10000))
+}
+
 function processNumber() {
     // "Připraví" číslo na použití v generátoru
     number = document.getElementById("numberInput").value;
